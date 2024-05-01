@@ -22,6 +22,6 @@ Description: This package provides functions to perform 'event coincidence
     time series. Additionally, the package contains two examplary data sets. 
     These can be used to perform the function examples and to re-calculate the 
     examples given in Siegmund et al. (2016)<doi:10.1016/j.cageo.2016.10.004>
-License: AGPL
+License: AGPL + file LICENSE
 NeedsCompilation: no
 Packaged: 2017-01-25 09:03:58 UTC; jonatansiegmund
