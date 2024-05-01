@@ -1,8 +1,8 @@
 Package: CoinCalc
 Type: Package
 Title: Event coincidence analysis
-Version: 2.0
-Date: 2015-11-11
+Version: 2.0.1
+Date: 2024-05-01
 Author: Jonatan Siegmund, Potsdam Institute for Climate Impact Research
 Maintainer: <jonatan.siegmund@pik.potsdam.de>
 Description: This package provides functions to perform 'event coincidence 
