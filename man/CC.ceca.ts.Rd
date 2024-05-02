@@ -3,7 +3,7 @@
 \alias{CC.ceca.ts}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-Function: Event Coincidence Analysis for three time series 
+Function: Event Coincidence Analysis for three time series
 }
 \description{
 This function performs the Conditioned Event Coincidence Analysis using three data sets A, B and C of event time series format (ts). NAs are allowed.
@@ -11,7 +11,8 @@ CECA is an extension of the Event Coincidence Analysis for three time series, wh
 Siegmund et al. (2016), Frontiers in Plant Scienes: http://journal.frontiersin.org/article/10.3389/fpls.2016.00733/full
 }
 \usage{
-CC.ceca.ts(seriesA,seriesB,seriesC,alpha=0.05,delT=0,delT.cond=0,sym=FALSE,sym.cond=FALSE,tau=0,tau.cond=0,sigtest="poisson",reps=1000)
+CC.ceca.ts(seriesA,seriesB,seriesC,alpha=0.05,delT=0,delT.cond=0,sym=FALSE,
+           sym.cond=FALSE,tau=0,tau.cond=0,sigtest="poisson",reps=1000)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -28,20 +29,20 @@ Time series C. Numeric vector or one-row-matrix containing a time series of bina
 SeriesA, series B and seriesC need to be of same length and may contain missing values.
 }
   \item{alpha}{
-Value between [0 1], default=0.05. 
+Value between [0 1], default=0.05.
 The significance level 'alpha' of the significance test. null hypothesis: The found coincidence rates result from randomly, independently distributed event time series.
 }
   \item{delT}{
-Positive value [1 inf], default = 1. 
-Tolerance window delta T. delT describes the temporal tolerance window in which coincidences may occur. 
+Positive value [1 inf], default = 1.
+Tolerance window delta T. delT describes the temporal tolerance window in which coincidences may occur.
 If e.g. delT=3, an event in seriesA occurring simultaneously or one, two or three time steps after an event in seriesB
-also counts for a coincidence (K). With delT=0 only simultaneous events are counted for coincidences, for e.g. delT=1 the tolerance window is extended by one time step. 
+also counts for a coincidence (K). With delT=0 only simultaneous events are counted for coincidences, for e.g. delT=1 the tolerance window is extended by one time step.
 }
   \item{delT.cond}{
-Positive value [1 inf], default = 1. 
-Tolerance window delta T for the conditioning between seriesC and seriesB. delT describes the temporal tolerance window in which coincidences may occur. 
+Positive value [1 inf], default = 1.
+Tolerance window delta T for the conditioning between seriesC and seriesB. delT describes the temporal tolerance window in which coincidences may occur.
 If e.g. delT=3, an event in seriesC occurring simultaneously or one, two or three time steps before an event in seriesB
-counts for conditioning of the event in B. With delT=0, only simultaneous events are counted for conditioning. 
+counts for conditioning of the event in B. With delT=0, only simultaneous events are counted for conditioning.
 }
   \item{sym}{
   TRUE or FALSE, default = FALSE.
@@ -54,24 +55,24 @@ counts for conditioning of the event in B. With delT=0, only simultaneous events
   TRUE:      symmetrical tolerance window for the conditioning of B events by C events. The tolerance window is symmetrically placed around t-tau.cond and t+tau.cond, respectively.
  }
   \item{tau}{
-Positive value [0 inf], default = 0. 
+Positive value [0 inf], default = 0.
 Time lag parameter tau allows for shifted events to be counted for coincidences (K). If e.g. tau=5, an event
 in seriesA occurring exactly 5 time steps after an event in seriesB also counts for coincidence (K).
 }
   \item{tau.cond}{
-Positive value [0 inf], default = 0. 
+Positive value [0 inf], default = 0.
 Time lag parameter tau.cond allows for shifted events to be counted for the conditioning. If e.g. tau=5, an event
 in seriesC occurring exactly 5 time steps before an event in seriesB counts for the conditioning.
 }
   \item{sigtest}{
-    Character specifying the type of significance test, default = "poisson". 
+    Character specifying the type of significance test, default = "poisson".
     "poisson": significance test based on the calculation of the probability that the empirical coincidence rate would occur for two random (poisson-process) time series.
     "wt.surrogate": significance test based on the calculation of event coincidence analysis for a large number of surrogate time series having the same average waiting time between two events.
     "shuffle.surrogate": significance test based on the calculation of event coincidence analysis for a large number of randomly shuffled time series having the same number of events like the original time series.
 }
   \item{reps}{
-    Positive whole number [100, inf], default = "1000". 
-    Number of surrogate/shuffled time series to be produced for the "surrogate" or "shuffle" significance test. 
+    Positive whole number [100, inf], default = "1000".
+    Number of surrogate/shuffled time series to be produced for the "surrogate" or "shuffle" significance test.
 }
 }
 
