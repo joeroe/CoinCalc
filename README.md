@@ -1,5 +1,9 @@
 # CoinCalc
 
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/joeroe/CoinCalc/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/joeroe/CoinCalc/actions/workflows/R-CMD-check.yaml)
+<!-- badges: end -->
+
 This R package provides six function allowing for the application of Event Coincidence Analysis for event (time) series.
 
 This repository is a fork of CoinCalc 2.0 (<https://github.com/JonatanSiegmund/CoinCalc>) which has been restructured to allow it to be cloned and installed more easily.
